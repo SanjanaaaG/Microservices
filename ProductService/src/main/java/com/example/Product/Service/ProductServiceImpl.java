@@ -50,7 +50,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void updateStock(Long productId, Long quantity) {
+    public void reduceStock(Long productId, Long quantity) {
         Product product = productRepo.findById(productId).orElseThrow(() -> new ProductNotFoundException("Product not found") );
         if(product.getStock() < quantity){
             throw new RuntimeException("Insuffecient stock");

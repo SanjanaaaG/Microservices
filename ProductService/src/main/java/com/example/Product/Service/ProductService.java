@@ -11,5 +11,5 @@ public interface ProductService {
     public ProductResponse getProductById(Long id);
     public ProductResponse addProduct(ProductRequest product);
     public Product updateProduct(Product product, Long id);
-    public void updateStock(Long productId , Long quantity);
+    public void reduceStock(Long productId , Long quantity);
 }

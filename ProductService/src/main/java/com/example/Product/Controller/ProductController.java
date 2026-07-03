@@ -74,7 +74,7 @@ public class ProductController {
     public ResponseEntity<Void> reduceStock(@PathVariable Long productId,
                                             @RequestParam Long quantity) {
         try {
-            productService.updateStock(productId,quantity);
+            productService.reduceStock(productId,quantity);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
